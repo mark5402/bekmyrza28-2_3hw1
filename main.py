@@ -9,14 +9,10 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
 
 
-
-
-# @dp.message_handler(commands=['start'])
-# async def echo(message:types.Message):
-    # await message.answer('Salam bro')
-    # await message.reply('Salam brother it is some kind of me')
-
-
+@dp.message_handler(commands=['memes'])
+async def quiz_1(message: types.Message):
+    photo = open('memes/ocr.jpeg', 'rb')
+    await bot.send_photo(message.from_user.id, photo, caption='trick or treat')
 
 @dp.message_handler(commands=['quiz'])
 async def quiz_1(message: types.Message):
