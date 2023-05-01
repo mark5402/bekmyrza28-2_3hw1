@@ -98,6 +98,7 @@ async def cancel_reg(message: types.Message, state: FSMContext):
         await message.answer("Ну и пошел ты!")
 
 
+
 #
 #
 #
